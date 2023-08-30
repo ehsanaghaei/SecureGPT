@@ -1,5 +1,3 @@
-# https://colab.research.google.com/github/huggingface/notebooks/blob/main/transformers_doc/en/pytorch/language_modeling.ipynb#scrollTo=FX3tVGtTXKMp
-
 import torch
 import logging
 # from Python_projects.TextGeneration.lib.CVE2CoA_functions import func_savejson
