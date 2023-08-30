@@ -36,15 +36,15 @@ q="s"
 
 class Config:
     if q=="s":
-        model_name = "/users/eaghaei/Python_projects/TextGeneration/models/gpt2/checkpoint-427500"
+        model_name = "./gpt2/checkpoint-427500"
         batch = 8
     else:
         model_name = "gpt2-large"
         batch = 14
-    # tokenizer = "/users/eaghaei/Python_projects/TextGeneration/models/SecureGPTTokenizer"
+    # tokenizer = "./models/SecureGPTTokenizer"
     tokenizer = "gpt2"
-    train_data = "/users/eaghaei/Python_projects/TextGeneration/data/SecureBERT_Dataset_2023_2.txt"
-    # train_data = "/users/eaghaei/Python_projects/TextGeneration/dataset_512_uncased_m.txt"
+    train_data = "./data/SecureBERT_Dataset_2023_2.txt"
+    # train_data = "dataset_512_uncased_m.txt"
     epochs = 5
     shuffle = False
     train_tokenizer = False
@@ -141,7 +141,7 @@ data_collator = DataCollatorForLanguageModeling(
     tokenizer=tokenizer, mlm=False,return_tensors="pt"
 )
 training_args = TrainingArguments(
-    output_dir=f"/users/eaghaei/Python_projects/TextGeneration/models/gpt2",
+    output_dir=f"./models/gpt2",
     overwrite_output_dir=True,
     num_train_epochs=Config.epochs,
     per_device_train_batch_size=Config.batch,
